@@ -8,7 +8,7 @@ A small and understandable WebComponets router which supports:
 
 ## Install
 ```
-npm install @satachito/jp-router
+npm install @satachito/jp-router --save
 ```
 
 ## Write HTML and JavaScript
@@ -138,5 +138,6 @@ Also in demo, we are using Bare module specifiers, ( for example `@satachito/jp-
 ```
 npm install -g es-dev-server
 cd node_modules/@satachito/jp-router/demo
+npm i
 es-dev-server --node-resolve
 ```
