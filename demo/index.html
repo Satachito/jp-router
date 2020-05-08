@@ -12,10 +12,7 @@
 		<li route=/horses		>Horses			</li>
 		<li route=/toMultiRoute	>toMultiRoute	</li>
 		<li route=/to404		>to404			</li>
-		<!--
-		<li route=/video/UptownFunc.mp4						>UptownFunc			</li>
-		<li route=/video/https%3A%2F%2Fwebliker.info%2Fwp-content%2Fuploads%2F2018%2F11%2Fsample-video.mp4>Sample video</li>
-		-->
+		<li route=/img/https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2Fa%2Fac%2FJordens_inre.jpg%2F230px-Jordens_inre.jpg>Sample image</li>
 	</ul>
 </nav>
 
@@ -52,6 +49,13 @@
 	title=video
 	data="<video autoplay></video>"
 	spec=html
+></jp-route>
+
+<jp-route
+	path=/img/:src
+	title=Image
+	data="img"
+	spec=tag
 ></jp-route>
 
 <jp-route path=/toMultiRoute></jp-route>
