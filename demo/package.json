@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@satachito/jp-router": "^0.9.0"
+  }
+}

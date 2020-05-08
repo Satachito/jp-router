@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang=zxx>
+<meta charset="utf-8" />
+<title>Router</title>
+
+<script type=module src=/pages/home.js></script>
+
+<nav class=nav>
+	<ul>
+		<li route=/				>Home			</li>
+		<li route=/direct		>Direct HTML	</li>
+		<li route=/horses		>Horses			</li>
+		<li route=/toMultiRoute	>toMultiRoute	</li>
+		<li route=/to404		>to404			</li>
+		<!--
+		<li route=/video/UptownFunc.mp4						>UptownFunc			</li>
+		<li route=/video/https%3A%2F%2Fwebliker.info%2Fwp-content%2Fuploads%2F2018%2F11%2Fsample-video.mp4>Sample video</li>
+		-->
+	</ul>
+</nav>
+
+<jp-route
+	path=/
+	title=Home
+	data=jp-home
+	spec=tag
+></jp-route>
+
+<jp-route
+	path=/direct
+	title="Direct html"
+	data="HTML DIRECT"
+	spec=html
+></jp-route>
+
+<jp-route
+	path=/horses
+	title=Horses
+	data=/pages/horses.js
+	spec=source
+></jp-route>
+
+<jp-route
+	path=/horse/:id
+	title="Horse Details"
+	data=/pages/horse.js
+	spec=source
+></jp-route>
+
+<jp-route
+	path=/video/:src
+	title=video
+	data="<video autoplay></video>"
+	spec=html
+></jp-route>
+
+<jp-route path=/toMultiRoute></jp-route>
+<jp-route path=/toMultiRoute></jp-route>
+
+<jp-router></jp-router>
+
+<script type=module>
+	import '@satachito/jp-router'
+</script>
+
