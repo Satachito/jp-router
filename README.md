@@ -80,27 +80,25 @@ see https://satachito.github.io/jp-router/
 ### horseDB.js
 
 ```
-export const horseDB = {
-	1	: [ 'Narita Brian'	, 19910503 ]
-,	2	: [ 'Deep Impact'	, 20020325 ]
-,	3	: [ 'Orfevre'		, 20080514 ]
-}
+export default [
+	[ 'Narita Brian'	, 19910503 ]
+,	[ 'Deep Impact'		, 20020325 ]
+,	[ 'Orfevre'			, 20080514 ]
+]
 ```
 
 ### horses.js
 ```
-import { horseDB } from './horseDB.js'
+import horseDB from './horseDB.js'
 
 export default class
 Horses extends HTMLElement {
 	connectedCallback() {
 		this.innerHTML = `
-			<div>
-				<h1>Horses</h1>
-				<ul>
-					${ Object.entries( horseDB ).map( _ => `<li route=/horse/${ _[ 0 ] }>${ JSON.stringify( _[ 1 ] ) }</li>` ).join( '' ) }
-				</ul>
-			</div>
+			<h1>Horses</h1>
+			<ul>
+				${ horseDB.map( ( $, _ ) => `<li route=/horse/${ _ }>${ JSON.stringify( $ ) }</li>` ).join( '' ) }
+			</ul>
 		`
 	}
 }
@@ -111,16 +109,14 @@ customElements.define( 'jp-horses', Horses )
 ### horse.js
 
 ```
-import { horseDB } from './horseDB.js'
+import horseDB from './horseDB.js'
 
 export default class
 Horse extends HTMLElement {
 	connectedCallback() {
 		this.innerHTML = `
-			<div class='page'>
-				<h1>Horse Details</h1>
-				<div>${ JSON.stringify( horseDB[ this.getAttribute( 'id' ) ] ) }</div>
-			</div>
+			<h1>Horse Details</h1>
+			<div>${ JSON.stringify( horseDB[ this.getAttribute( 'id' ) ] ) }</div>
 		`
 	}
 }
@@ -134,3 +130,4 @@ customElements.define( 'jp-horse', Horse )
 npm install -g http-server
 http-server
 ```
+
