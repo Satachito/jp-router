@@ -1,9 +1,5 @@
 {
-  "name": "@satachito/jp-router",
-  "version": "1.0.1",
-  "description": "A simple WebComponents router",
-  "main": "jp-router.js",
-  "repository": "https://github.com/Satachito/jp-router.git",
-  "author": "Satoru Ogura <satoru.ogura@me.com>",
-  "license": "MIT"
+  "dependencies": {
+    "@satachito/jp-router": "^0.9.0"
+  }
 }
