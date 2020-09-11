@@ -7,9 +7,16 @@ A small and understandable WebComponets router which supports:
 * Tag base creation
 
 ## Install
+
 ```
 npm install @satachito/jp-router --save
 ```
+
+## Demo
+
+Our demo contains various patter including illegal patterns i.e. 404 and multiple routing.
+
+see https://satachito.github.io/jp-router/
 
 ## Write HTML and JavaScript
 
@@ -122,22 +129,8 @@ customElements.define( 'jp-horse', Horse )
 ```
 
 ### Serve
+
 ```
 npm install -g http-server
 http-server
-```
-
-
-## Running demo
-
-Our demo contains illegal patterns i.e. 404 and multiple routing.
-
-Also in demo, we are using Bare module specifiers, ( for example `@satachito/jp-router` to `./node_modules/@satachito/jp-router/jp-router.js` ). So run this demo using `es-dev-server` with `--node-resolve` option.
-
-### Serve
-```
-npm install -g es-dev-server
-cd node_modules/@satachito/jp-router/demo
-npm i
-es-dev-server --node-resolve
 ```
